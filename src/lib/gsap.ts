@@ -46,5 +46,5 @@ export function gsapIfReady(): GsapKit | null {
   return ready;
 }
 
-export const prefersReducedMotion = () =>
-  typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+// Showcase site: the motion is the point, so it runs for everyone (the hero video keeps its pause button).
+export const prefersReducedMotion = () => false;

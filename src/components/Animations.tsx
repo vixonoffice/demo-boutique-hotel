@@ -11,7 +11,7 @@ const $$ = <T extends HTMLElement = HTMLElement>(sel: string, root: ParentNode =
 function init({ gsap, ScrollTrigger }: GsapKit) {
   const mm = gsap.matchMedia();
 
-  mm.add("(prefers-reduced-motion: no-preference)", () => {
+  mm.add("all", () => {
     // Word-mask headline reveals
     $$("[data-split]").forEach((el) => {
       const words = $$(".si", el);
@@ -121,7 +121,7 @@ function init({ gsap, ScrollTrigger }: GsapKit) {
   });
 
   // Horizontal pinned experiences (desktop). On touch / narrow screens it stays a native swipe carousel.
-  mm.add("(min-width: 768px) and (prefers-reduced-motion: no-preference)", () => {
+  mm.add("(min-width: 768px)", () => {
     const root = document.querySelector<HTMLElement>("[data-exp]");
     if (!root) return;
     const track = root.querySelector<HTMLElement>(".exp-track");

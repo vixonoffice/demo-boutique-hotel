@@ -152,7 +152,7 @@ em.t-it {
     transform: scale(1);
   }
 }
-@media (prefers-reduced-motion: no-preference) {
+@media all {
   .vl-rise {
     animation: vl-rise 1.25s var(--ease-vl) both;
     animation-delay: calc(var(--enter, 0s) + var(--d, 0s));
@@ -318,11 +318,6 @@ em.t-it {
 }
 .flip-back {
   transform: rotateY(180deg);
-}
-@media (prefers-reduced-motion: reduce) {
-  .flip-card {
-    transition-duration: 0.01s;
-  }
 }
 
 /* ---------- Experiences scroller ---------- */

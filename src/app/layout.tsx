@@ -3,7 +3,6 @@ import { Inter_Tight, Instrument_Serif } from "next/font/google";
 import Animations from "@/components/Animations";
 import Cursor from "@/components/Cursor";
 import Footer from "@/components/Footer";
-import MobileBar from "@/components/MobileBar";
 import Nav from "@/components/Nav";
 import SmoothScroll from "@/components/SmoothScroll";
 import { TransitionProvider } from "@/components/TransitionProvider";
@@ -76,7 +75,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Nav />
           <main id="main">{children}</main>
           <Footer />
-          <MobileBar />
           <Cursor />
           <SmoothScroll />
           <Animations />
