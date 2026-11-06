@@ -19,7 +19,7 @@ import landOlive from "@/assets/photos/land-olive-v1.webp";
 import landGrove from "@/assets/photos/land-grove-v1.webp";
 import landVillage from "@/assets/photos/land-village-v1.webp";
 
-import posterHero from "@/assets/posters/hero-cliff-poster-v1.webp";
+import posterHero from "@/assets/posters/hero-montage-poster-v2.webp";
 import posterLinen from "@/assets/posters/rooms-linen-poster-v1.webp";
 import posterDining from "@/assets/posters/dining-plates-poster-v1.webp";
 import posterCoves from "@/assets/posters/coves-sailboat-poster-v1.webp";
@@ -50,15 +50,15 @@ export const photos = {
 export type PhotoKey = keyof typeof photos;
 
 export type VideoKey =
-  | "hero-cliff-v1"
+  | "hero-montage-v2"
   | "rooms-linen-v1"
   | "dining-plates-v1"
   | "coves-sailboat-v1"
   | "pool-horizon-v1"
   | "contact-sunset-v1";
 
-export const videos: Record<VideoKey, { src: string; poster: StaticImageData }> = {
-  "hero-cliff-v1": { src: "/media/video/hero-cliff-v1.mp4", poster: posterHero },
+export const videos: Record<VideoKey, { src: string; srcMobile?: string; poster: StaticImageData }> = {
+  "hero-montage-v2": { src: "/media/video/hero-montage-v2.mp4", srcMobile: "/media/video/hero-montage-m-v2.mp4", poster: posterHero },
   "rooms-linen-v1": { src: "/media/video/rooms-linen-v1.mp4", poster: posterLinen },
   "dining-plates-v1": { src: "/media/video/dining-plates-v1.mp4", poster: posterDining },
   "coves-sailboat-v1": { src: "/media/video/coves-sailboat-v1.mp4", poster: posterCoves },

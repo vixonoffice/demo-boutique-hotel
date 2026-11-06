@@ -7,10 +7,10 @@ export default function Hero() {
     <section data-hero className="relative h-[100svh] min-h-[620px] w-full overflow-hidden bg-ink text-bone">
       <div data-hero-media className="vl-zoom absolute inset-0">
         <AutoVideo
-          name="hero-cliff-v1"
+          name="hero-montage-v2"
           eager
-          objectPosition="64% 50%"
-          alt="Casa Vellora, a white hotel built into a cliff above turquoise water"
+          objectPosition="50% 50%"
+          alt="White cliffside suites with private pools above the sea at Casa Vellora"
           control="right-5 top-24 md:bottom-12 md:right-10 md:top-auto"
         />
       </div>

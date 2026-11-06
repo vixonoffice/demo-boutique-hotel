@@ -22,7 +22,10 @@ type Props = {
  * no audio track in the files, and play() retried on first touch / scroll / visibility change.
  */
 export default function AutoVideo({ name, eager = false, className = "", sizes = "100vw", objectPosition, control, alt = "" }: Props) {
-  const { src, poster } = videos[name];
+  const entry = videos[name];
+  const poster = entry.poster;
+  // Phones get a lighter 720p cut when one exists. Decided once on the client; the server HTML uses <source media> for eager videos.
+  const src = entry.srcMobile && typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches ? entry.srcMobile : entry.src;
   const ref = useRef<HTMLVideoElement>(null);
   const userPaused = useRef(false);
   const visible = useRef(eager);
@@ -48,7 +51,7 @@ export default function AutoVideo({ name, eager = false, className = "", sizes =
       ([entry]) => {
         visible.current = entry.isIntersecting;
         if (entry.isIntersecting) {
-          if (!v.getAttribute("src")) {
+          if (!v.getAttribute("src") && !v.currentSrc) {
             v.src = src;
             v.load();
           }
@@ -113,7 +116,7 @@ export default function AutoVideo({ name, eager = false, className = "", sizes =
         ref={ref}
         className="absolute inset-0 h-full w-full object-cover"
         style={objectPosition ? { objectPosition } : undefined}
-        src={eager ? src : undefined}
+        src={eager && !entry.srcMobile ? src : undefined}
         autoPlay
         muted
         loop
@@ -123,7 +126,14 @@ export default function AutoVideo({ name, eager = false, className = "", sizes =
         tabIndex={-1}
         disablePictureInPicture
         disableRemotePlayback
-      />
+      >
+        {eager && entry.srcMobile ? (
+          <>
+            <source src={entry.srcMobile} type="video/mp4" media="(max-width: 767px)" />
+            <source src={entry.src} type="video/mp4" />
+          </>
+        ) : null}
+      </video>
       {control ? (
         <button
           type="button"

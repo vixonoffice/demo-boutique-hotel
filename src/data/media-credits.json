@@ -1,10 +1,38 @@
 {
-  "hero-cliff-v1": {
+  "hero-montage-v2-1": {
     "type": "video",
-    "id": 26057993,
-    "author": "Edoardo Tommasini",
-    "authorUrl": "https://www.pexels.com/@edotommo99",
-    "url": "https://www.pexels.com/video/albania-26057993/"
+    "id": 32764639,
+    "author": "Mihaela Claudia Puscas",
+    "authorUrl": "https://www.pexels.com/@mihaela-claudia-puscas-836545137",
+    "url": "https://www.pexels.com/video/aerial-view-of-santorini-s-cliffside-architecture-32764639/"
+  },
+  "hero-montage-v2-2": {
+    "type": "video",
+    "id": 36867544,
+    "author": "Saulo Nulo",
+    "authorUrl": "https://www.pexels.com/@shahcian",
+    "url": "https://www.pexels.com/video/breathtaking-infinity-pool-with-tropical-view-36867544/"
+  },
+  "hero-montage-v2-3": {
+    "type": "video",
+    "id": 35275677,
+    "author": "Florian Delée",
+    "authorUrl": "https://www.pexels.com/@florian-delee-209542985",
+    "url": "https://www.pexels.com/video/aerial-view-of-luxury-cliffside-villas-in-bali-35275677/"
+  },
+  "hero-montage-v2-4": {
+    "type": "video",
+    "id": 32350539,
+    "author": "Mihaela Claudia Puscas",
+    "authorUrl": "https://www.pexels.com/@mihaela-claudia-puscas-836545137",
+    "url": "https://www.pexels.com/video/stunning-aerial-view-of-santorini-s-iconic-architecture-32350539/"
+  },
+  "hero-montage-v2-5": {
+    "type": "video",
+    "id": 37945689,
+    "author": "Yunus Terk",
+    "authorUrl": "https://www.pexels.com/@yunusterk",
+    "url": "https://www.pexels.com/video/aerial-drone-view-of-antalya-cliffs-at-sunset-37945689/"
   },
   "rooms-linen-v1": {
     "type": "video",
