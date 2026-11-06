@@ -45,17 +45,19 @@ export default function Manifesto() {
         <div className="relative lg:col-span-5">
           <div data-clip className="relative ml-auto aspect-[4/5] w-[82%] overflow-hidden bg-sand">
             <div data-parallax="0.07" data-inner className="absolute inset-x-0 -top-[8%] h-[116%]">
-              <Photo name="sea-cove-v1" alt="A turquoise cove below the hotel cliff" fill sizes="(min-width:1024px) 34vw, 80vw" className="object-cover" style={{ objectPosition: "40% 50%" }} />
+              <Photo name="sea-cove-v1" alt="A turquoise cove below the hotel cliff" fill sizes="(min-width:1024px) 36vw, 82vw" className="object-cover" style={{ objectPosition: "40% 50%" }} />
             </div>
           </div>
-          <div data-clip className="relative -mt-[22%] aspect-square w-[52%] overflow-hidden bg-sand">
-            <div data-parallax="0.09" data-inner className="absolute inset-x-0 -top-[10%] h-[120%]">
-              <Photo name="land-grove-v1" alt="Olive trees in low evening light" fill sizes="(min-width:1024px) 20vw, 50vw" className="object-cover" />
+          <div className="mt-5 flex items-end gap-5 md:mt-6 md:gap-6">
+            <div data-clip className="relative aspect-[4/3] w-[58%] shrink-0 overflow-hidden bg-sand">
+              <div data-parallax="0.09" data-inner className="absolute inset-x-0 -top-[10%] h-[120%]">
+                <Photo name="land-grove-v1" alt="Olive trees in low evening light" fill sizes="(min-width:1024px) 22vw, 58vw" className="object-cover" />
+              </div>
             </div>
+            <p data-fade className="max-w-[28ch] pb-1 text-sm leading-relaxed text-muted">
+              The cove at the foot of the cliff, and the grove behind the kitchen. Both are ours, neither is crowded.
+            </p>
           </div>
-          <p data-fade className="mt-6 max-w-[28ch] text-sm leading-relaxed text-muted lg:absolute lg:bottom-4 lg:right-0">
-            The cove at the foot of the cliff, and the grove behind the kitchen. Both are ours, neither is crowded.
-          </p>
         </div>
       </div>
     </section>
