@@ -120,8 +120,8 @@ function init({ gsap, ScrollTrigger }: GsapKit) {
     });
   });
 
-  // Horizontal pinned experiences (desktop). On touch / narrow screens it stays a native swipe carousel.
-  mm.add("(min-width: 768px)", () => {
+  // Horizontal pinned experiences: vertical scroll drives the cards sideways, on phones too.
+  mm.add("all", () => {
     const root = document.querySelector<HTMLElement>("[data-exp]");
     if (!root) return;
     const track = root.querySelector<HTMLElement>(".exp-track");

@@ -8,29 +8,28 @@ export default function Experiences() {
     <section
       id="experiences"
       data-exp
-      className="on-light relative flex flex-col justify-center overflow-hidden bg-sand py-24 text-ink md:h-[100svh] md:py-0"
+      className="on-light relative flex h-[100svh] min-h-[560px] flex-col justify-center overflow-hidden bg-sand text-ink"
     >
-      <div className="gutter mx-auto flex w-full max-w-[1900px] flex-wrap items-end justify-between gap-6 pb-8 md:pb-6 md:pt-24">
+      <div className="gutter mx-auto flex w-full max-w-[1900px] flex-wrap items-end justify-between gap-4 pb-5 pt-24 md:gap-6 md:pb-6">
         <div>
           <p className="eyebrow mb-5 text-clay">Experiences</p>
           <Split as="h2" className="t-display t-md" text="Days are for the *sea,* the grove and the stone." />
         </div>
-        <div className="hidden w-64 items-center gap-4 md:flex" aria-hidden="true">
-          <span className="t-display text-3xl tabular-nums" data-exp-count>01</span>
+        <div className="flex w-full items-center gap-4 md:w-64" aria-hidden="true">
+          <span className="t-display text-2xl tabular-nums md:text-3xl" data-exp-count>01</span>
           <span className="relative h-px flex-1 bg-ink/25">
             <span data-exp-bar className="absolute inset-0 origin-left scale-x-[0.02] bg-clay" />
           </span>
-          <span className="t-display text-3xl tabular-nums text-muted">{String(experiences.length).padStart(2, "0")}</span>
+          <span className="t-display text-2xl tabular-nums text-muted md:text-3xl">{String(experiences.length).padStart(2, "0")}</span>
         </div>
-        <p className="eyebrow text-muted md:hidden">Swipe along</p>
       </div>
 
-      <div className="exp-track gap-3 px-5 pb-4 md:min-h-0 md:flex-1 md:gap-5 md:px-10 md:pb-16 xl:px-16" tabIndex={-1}>
+      <div className="exp-track min-h-0 flex-1 gap-3 px-5 pb-8 md:gap-5 md:px-10 md:pb-16 xl:px-16" tabIndex={-1}>
         {experiences.map((e, i) => (
           <article
             key={e.n}
             data-exp-panel
-            className={`relative h-[30rem] w-[82vw] shrink-0 overflow-hidden bg-ink text-bone md:h-auto md:w-[42vw] lg:w-[33vw] ${
+            className={`relative w-[82vw] shrink-0 overflow-hidden bg-ink text-bone md:w-[42vw] lg:w-[33vw] ${
               i % 2 === 0 ? "md:mb-10" : "md:mt-10"
             }`}
           >
