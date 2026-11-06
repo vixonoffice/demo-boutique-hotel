@@ -1,0 +1,19 @@
+# deps / build
+node_modules
+.next
+out
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+
+# raw downloads from Pexels (re-created by scripts/fetch-media.mjs)
+.media-src
+
+# env
+.env*
+!.env.example
+
+# local tooling output
+lighthouse-*.json
+.lighthouse
+npm-debug.log*
